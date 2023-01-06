@@ -1,6 +1,5 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
-import { roboto, theme } from '../src/styles/theme/theme'
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -25,13 +24,8 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html
-        lang="pt-br"
-        className={roboto.className}
-        style={{ scrollBehavior: 'smooth' }}
-      >
+      <Html lang="pt-br" style={{ scrollBehavior: 'smooth' }}>
         <Head>
-          <meta name="theme-color" content={theme.palette.primary.main} />
           <link rel="shortcut icon" href="favicon.svg" type="svg" />
         </Head>
         <body>
