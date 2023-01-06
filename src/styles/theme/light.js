@@ -1,7 +1,14 @@
 import { red } from '@mui/material/colors'
-import { Roboto } from '@next/font/google'
+import { Roboto, Unbounded } from '@next/font/google'
 
 const roboto = Roboto({
+  weight: ['300', '400', '500', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  fallback: ['Helvetica', 'Arial', 'sans-serif']
+})
+
+const unbounded = Unbounded({
   weight: ['300', '400', '500', '700'],
   subsets: ['latin'],
   display: 'swap',
@@ -11,7 +18,8 @@ const roboto = Roboto({
 export default {
   pallete: {
     primary: {
-      main: '#EC1D24'
+      main: '#EC1D24',
+      description: '#715C7A'
     },
     secondary: {
       main: '#fff'
@@ -25,6 +33,9 @@ export default {
   },
   typography: {
     fontFamily: roboto.style.fontFamily,
+    fonts: {
+      h1: unbounded.style.fontFamily
+    },
     fontSize: '16px'
   }
 }
