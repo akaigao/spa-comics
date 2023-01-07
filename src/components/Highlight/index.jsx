@@ -13,7 +13,7 @@ import {
   HighlightThumbContainer
 } from './style'
 
-export function Highlight() {
+export function Highlight({ onClick }) {
   return (
     <HighlightContainer>
       <HighlightThumbContainer>
@@ -36,7 +36,10 @@ export function Highlight() {
           minus porro sequi tempore earum optio vitae magnam, voluptates quia
           ullam molestias dolorum?
         </Description>
-        <MyButton variant="contained">Continuar lendo</MyButton>
+
+        <MyButton variant="contained" onClick={onClick}>
+          Continuar lendo
+        </MyButton>
       </HighlightContainerInfos>
     </HighlightContainer>
   )

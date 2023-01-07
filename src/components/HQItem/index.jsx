@@ -7,9 +7,9 @@ import {
   HQItemThumbContainer
 } from './style'
 
-export function HQItem({}) {
+export function HQItem({ onClick }) {
   return (
-    <HQItemContainer>
+    <HQItemContainer onClick={onClick}>
       <HQItemThumbContainer>
         <HQItemThumb
           src="https://www.looper.com/img/gallery/marvel-heroes-were-still-waiting-to-see-on-screen/intro-1553116214.jpg"
