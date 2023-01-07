@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    min-width: 100vw;
+    min-width: 100%;
     min-height: 100vh;
 
     font-family: ${props => props.theme.typography.fontFamily};
@@ -24,13 +24,11 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   #__next {
-    width: 1440px;
+    max-width: 1440px;
     margin: 0 50px;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
     gap: 50px;
   }
@@ -39,6 +37,12 @@ export const GlobalStyle = createGlobalStyle`
 export const Title = styled.h1`
   font-family: ${props => props.theme.typography.fonts.h1};
   font-size: 1.8em;
+  line-height: 1.2em;
+`
+
+export const SecondaryTitle = styled.h1`
+  font-family: ${props => props.theme.typography.fonts.h1};
+  font-size: 1em;
   line-height: 1.2em;
 `
 
