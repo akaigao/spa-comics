@@ -10,3 +10,5 @@ export default async function handler(req, res) {
 
   res.status(200).json(response)
 }
+
+// &ts=1673025466&apikey=94ad184aacf11581783e5a0081388ffa&hash=e3d2bb6a1ee3c7f7f58943b1eb725195

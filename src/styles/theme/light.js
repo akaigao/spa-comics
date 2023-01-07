@@ -25,7 +25,8 @@ export default {
       main: '#fff'
     },
     background: {
-      main: '#1A0024'
+      main: '#1A0024',
+      second: 'linear-gradient(0deg, #1A0024, transparent 50%);'
     },
     error: {
       main: red.A400

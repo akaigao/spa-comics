@@ -44,6 +44,7 @@ export const Title = styled.h1`
 export const SecondaryTitle = styled.h1`
   font-family: ${props => props.theme.typography.fonts.h1};
   font-size: 1em;
+  font-weight: 400;
   line-height: 1.2em;
   word-break: break-all;
 `
@@ -57,6 +58,12 @@ export const Description = styled.p`
 export const Span = styled.span`
   color: ${props => props.theme.pallete.primary.description};
   font-size: 0.9em;
+  line-height: 1.5em;
+
+  span {
+    color: ${props => props.theme.pallete.secondary.main};
+    letter-spacing: 0.05em;
+  }
 `
 
 export const MyButton = styled(Button)`
@@ -69,6 +76,12 @@ export const MyButton = styled(Button)`
 
   :hover {
     background-position: right center;
+  }
+
+  a {
+    width: 100%;
+    text-decoration: none;
+    color: ${props => props.theme.pallete.secondary.main};
   }
 `
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-export function Box({ orientation = 'horizontal', children }) {
+export function Box({ sx, orientation = 'horizontal', children }) {
   const [style, setStyle] = useState({
     display: 'flex',
     alignItems: 'center',
@@ -10,14 +10,14 @@ export function Box({ orientation = 'horizontal', children }) {
 
   useEffect(() => {
     if (orientation === 'horizontal') {
-      setStyle({ ...style, flexDirection: 'row' })
+      setStyle({ ...style, ...sx, flexDirection: 'row' })
       return
     }
 
     if (orientation === 'vertical') {
-      setStyle({ ...style, flexDirection: 'column' })
+      setStyle({ ...style, ...sx, flexDirection: 'column' })
     }
-  }, [orientation])
+  }, [orientation, sx])
 
   return <div style={style}>{children}</div>
 }
