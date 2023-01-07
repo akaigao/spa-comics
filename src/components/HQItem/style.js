@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 export const HQItemContainer = styled.div`
+  overflow: hidden;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -10,7 +12,9 @@ export const HQItemContainer = styled.div`
 `
 
 export const HQItemThumbContainer = styled.div`
-  width: 100%;
+  height: 300px;
+
+  overflow: hidden;
 
   display: flex;
   align-items: center;
@@ -19,9 +23,11 @@ export const HQItemThumbContainer = styled.div`
 
 export const HQItemThumb = styled.img`
   overflow: hidden;
-
   height: 100%;
-  border-radius: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `
 
 export const HQItemContainerInfos = styled.section`
@@ -30,5 +36,5 @@ export const HQItemContainerInfos = styled.section`
   align-items: flex-start;
   justify-content: center;
 
-  gap: 20px;
+  gap: 10px;
 `

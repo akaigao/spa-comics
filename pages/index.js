@@ -6,7 +6,7 @@ export default function Home({ allComics, comicForId }) {
   return (
     <>
       <Highlight comic={comicForId} />
-      <List />
+      <List comics={allComics} />
     </>
   )
 }

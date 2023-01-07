@@ -1,3 +1,4 @@
+import { format } from 'date-fns'
 import { Divisor, SecondaryTitle, Span } from '../../styles/global'
 import { Box } from '../Box'
 import {
@@ -7,24 +8,27 @@ import {
   HQItemThumbContainer
 } from './style'
 
-export function HQItem({ onClick }) {
+export function HQItem({ onClick, idComic, thumb, title, date, formatData }) {
+  const pathThumb = thumb.path + '.' + thumb.extension
+  const formattedDate = format(new Date(date), 'MMMM dd, yyyy')
+
   return (
-    <HQItemContainer onClick={onClick}>
+    <HQItemContainer>
       <HQItemThumbContainer>
         <HQItemThumb
-          src="https://www.looper.com/img/gallery/marvel-heroes-were-still-waiting-to-see-on-screen/intro-1553116214.jpg"
-          alt="heros"
+          src={pathThumb}
+          alt={title}
+          onClick={onClick}
+          data-id={idComic}
         />
       </HQItemThumbContainer>
 
       <HQItemContainerInfos>
-        <SecondaryTitle>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-        </SecondaryTitle>
+        <SecondaryTitle>{title}</SecondaryTitle>
         <Box>
-          <Span>December 26, 2021</Span>
+          <Span>{formattedDate}</Span>
           <Divisor />
-          <Span>Comic</Span>
+          <Span>{formatData}</Span>
         </Box>
       </HQItemContainerInfos>
     </HQItemContainer>

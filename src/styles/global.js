@@ -43,7 +43,7 @@ export const Title = styled.h1`
 
 export const SecondaryTitle = styled.h1`
   font-family: ${props => props.theme.typography.fonts.h1};
-  font-size: 1em;
+  font-size: 0.8em;
   font-weight: 400;
   line-height: 1.2em;
   word-break: break-all;

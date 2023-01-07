@@ -14,6 +14,7 @@ export const Listing = styled.div`
   width: 100%;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: flex-start;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-gap: 60px 30px;
 `

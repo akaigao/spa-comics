@@ -9,7 +9,7 @@ import {
   HighlightThumbContainer
 } from './style'
 
-export function Highlight({ onClick, comic }) {
+export function Highlight({ comic }) {
   if (!comic) return
 
   const [open, setOpen] = useState(false)
