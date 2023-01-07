@@ -38,17 +38,20 @@ export const Title = styled.h1`
   font-family: ${props => props.theme.typography.fonts.h1};
   font-size: 1.8em;
   line-height: 1.2em;
+  word-break: break-all;
 `
 
 export const SecondaryTitle = styled.h1`
   font-family: ${props => props.theme.typography.fonts.h1};
   font-size: 1em;
   line-height: 1.2em;
+  word-break: break-all;
 `
 
 export const Description = styled.p`
   color: ${props => props.theme.pallete.primary.description};
   line-height: 1.5em;
+  word-break: break-all;
 `
 
 export const Span = styled.span`
