@@ -1,46 +1,41 @@
+import { useState } from 'react'
+import { MyButton, Title } from '../../styles/global'
+import { BasicModal } from '../BasicModal'
 import {
-  Description,
-  Divisor,
-  MyButton,
-  Span,
-  Title
-} from '../../styles/global'
-import { Box } from '../Box'
-import {
+  Gradient,
+  HighlightButtonContainer,
   HighlightContainer,
-  HighlightContainerInfos,
   HighlightThumb,
   HighlightThumbContainer
 } from './style'
 
-export function Highlight({ onClick }) {
+export function Highlight({ onClick, comic }) {
+  if (!comic) return
+
+  const [open, setOpen] = useState(false)
+
+  const handleOpenModal = () => setOpen(true)
+  const handleCloseModal = () => setOpen(false)
+
+  const pathThumb = comic[0].thumbnail.path + '.' + comic[0].thumbnail.extension
+
   return (
-    <HighlightContainer>
-      <HighlightThumbContainer>
-        <HighlightThumb
-          src="https://www.looper.com/img/gallery/marvel-heroes-were-still-waiting-to-see-on-screen/intro-1553116214.jpg"
-          alt="heros"
-        />
-      </HighlightThumbContainer>
+    <>
+      <HighlightContainer>
+        <HighlightThumbContainer>
+          <Gradient />
+          <HighlightThumb src={pathThumb} alt={comic[0].title} />
 
-      <HighlightContainerInfos>
-        <Box>
-          <Span>December 26, 2021</Span>
-          <Divisor />
-          <Span>Comic</Span>
-        </Box>
-        <Title>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</Title>
-        <Description>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
-          atque perspiciatis accusantium excepturi harum officia facilis odit
-          minus porro sequi tempore earum optio vitae magnam, voluptates quia
-          ullam molestias dolorum?
-        </Description>
+          <HighlightButtonContainer>
+            <Title>{comic[0].title}</Title>
+            <MyButton fullWidth variant="contained" onClick={handleOpenModal}>
+              Continue Reading
+            </MyButton>
+          </HighlightButtonContainer>
+        </HighlightThumbContainer>
+      </HighlightContainer>
 
-        <MyButton variant="contained" onClick={onClick}>
-          Continuar lendo
-        </MyButton>
-      </HighlightContainerInfos>
-    </HighlightContainer>
+      <BasicModal open={open} onClose={handleCloseModal} comic={comic} />
+    </>
   )
 }

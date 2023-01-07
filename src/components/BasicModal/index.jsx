@@ -1,4 +1,5 @@
 import { Modal } from '@mui/material'
+import { format } from 'date-fns'
 import {
   Description,
   Divisor,
@@ -17,16 +18,21 @@ import {
   Gradient
 } from './style'
 
-export function BasicModal({ open, onClose }) {
+export function BasicModal({ open, onClose, comic }) {
+  if (!comic) return
+
+  const pathThumb = comic[0].thumbnail.path + '.' + comic[0].thumbnail.extension
+  const description = !comic[0].description
+    ? 'No description for this comic :('
+    : comic[0].description.split('<br>')[0]
+  const date = format(new Date(comic[0].dates[0].date), 'yyyy')
+
   return (
     <Modal open={open} onClose={onClose}>
       <BasicModalContainer>
         <BasicModalThumbContainer>
           <Gradient />
-          <BasicModalThumb
-            src="https://www.looper.com/img/gallery/marvel-heroes-were-still-waiting-to-see-on-screen/intro-1553116214.jpg"
-            alt="heros"
-          />
+          <BasicModalThumb src={pathThumb} alt="test" />
 
           <BasicModalButtonContainer>
             <MyButton fullWidth>
@@ -43,20 +49,13 @@ export function BasicModal({ open, onClose }) {
 
         <BasicModalContainerInfos>
           <Box orientation="horizontal">
-            <Span>LATEST: 2012</Span>
+            <Span>LATEST: {date}</Span>
             <Divisor />
-            <Span>VARIANT: TEAMS</Span>
+            <Span>VARIANT: {comic[0].variantDescription}</Span>
           </Box>
 
-          <Title>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          </Title>
-          <Description>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
-            atque perspiciatis accusantium excepturi harum officia facilis odit
-            minus porro sequi tempore earum optio vitae magnam, voluptates quia
-            ullam molestias dolorum?
-          </Description>
+          <Title>{comic[0].title}</Title>
+          <Description>{description}</Description>
 
           <hr />
 
@@ -72,33 +71,27 @@ export function BasicModal({ open, onClose }) {
               <Span>
                 Creators:{' '}
                 <span>
-                  Ronald Byrd, Jeff Christiansen, Anthony Flamini, Richard
-                  Green, Michael Hoskin, Sean Mcquaid, Eric J. Moreels, Mark
-                  OEnglish, Stuart Vandal, Tom Grummett
+                  {comic[0].creators.items.map(item => `${item.name}, `)}
                 </span>
               </Span>
 
               <Span>
                 Characters:{' '}
                 <span>
-                  Apocalypse, Blink, Colossus, Gambit, Holocaust (Age of
-                  Apocalypse), Magneto, Mister Sinister, Rogue, Sabretooth (Age
-                  of Apocalypse), Shadowcat (Age of Apocalypse), Silver Samurai
-                  (Age of Apocalypse), Storm (Age of Apocalypse), Sunfire,
-                  Wolverine
+                  {comic[0].characters.items.map(item => `${item.name}, `)}
                 </span>
               </Span>
 
               <Span>
-                Format: <span>Comic</span>
+                Format: <span>{comic[0].format}</span>
               </Span>
 
               <Span>
-                Price: $<span>3.99</span>
+                Price: $<span>{comic[0].prices[0].price}</span>
               </Span>
 
               <Span>
-                UPC: <span>5960605695-00111</span>
+                UPC: <span>{comic[0].upc}</span>
               </Span>
             </Box>
           </Box>

@@ -24,7 +24,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   #__next {
-    max-width: 1440px;
+    width: 1440px;
     margin: 0 50px;
 
     display: flex;

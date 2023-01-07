@@ -26,7 +26,8 @@ export default {
     },
     background: {
       main: '#1A0024',
-      second: 'linear-gradient(0deg, #1A0024, transparent 50%);'
+      second: 'linear-gradient(0deg, #1A0024, transparent 50%);',
+      third: 'linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent 50%);'
     },
     error: {
       main: red.A400
