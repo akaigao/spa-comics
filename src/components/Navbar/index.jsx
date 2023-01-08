@@ -14,12 +14,6 @@ export function Navbar() {
             <hr className={router.pathname === '/' ? 'active' : ''} />
           </Link>
         </NavItem>
-        <NavItem>
-          <Link href="/about">
-            About
-            <hr className={router.pathname === '/about' ? 'active' : ''} />
-          </Link>
-        </NavItem>
       </NavList>
     </nav>
   )
