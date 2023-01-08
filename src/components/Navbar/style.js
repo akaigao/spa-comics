@@ -15,11 +15,11 @@ export const NavItem = styled.li`
   a {
     text-decoration: none;
     letter-spacing: 0.15em;
-    color: ${props => props.theme.pallete.secondary.main};
+    color: ${props => props.theme.pallete.primary.main};
     transition: 0.5s;
 
     :hover {
-      color: ${props => props.theme.pallete.primary.main};
+      color: ${props => props.theme.pallete.primary.description};
       transition: 0.5s;
 
       hr {

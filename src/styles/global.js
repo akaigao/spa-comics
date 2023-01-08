@@ -9,28 +9,23 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    min-width: 100%;
     min-height: 100vh;
+    max-width: 100vw;
 
     font-family: ${props => props.theme.typography.fontFamily};
     font-size: ${props => props.theme.typography.fontSize};
 
     background-color: ${props => props.theme.pallete.background.main};
     color: ${props => props.theme.pallete.secondary.main};
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   #__next {
-    width: 1440px;
-    margin: 0 50px;
+    width: 100%;
 
     display: flex;
     flex-direction: column;
-
-    gap: 50px;
+    justify-content: center;
+    align-items: center;
   }
 `
 
@@ -70,9 +65,11 @@ export const MyButton = styled(Button)`
   border-radius: 50px !important;
   font-size: 0.8em !important;
 
-  background: #ed213a;
-  background: -webkit-linear-gradient(to right, #ed213a, #93291e);
-  background: linear-gradient(to right, #ed213a, #93291e);
+  background: ${props => props.theme.pallete.primary.main};
+  background: -webkit-linear-gradient(
+    ${props => props.theme.pallete.button.main}
+  );
+  background: linear-gradient(${props => props.theme.pallete.button.main});
 
   :hover {
     background-position: right center;
@@ -86,9 +83,11 @@ export const MyButton = styled(Button)`
 `
 
 export const Divisor = styled.div`
-  background: #ed213a;
-  background: -webkit-linear-gradient(to right, #ed213a, #93291e);
-  background: linear-gradient(to right, #ed213a, #93291e);
+  background: ${props => props.theme.pallete.primary.main};
+  background: -webkit-linear-gradient(
+    ${props => props.theme.pallete.button.main}
+  );
+  background: linear-gradient(${props => props.theme.pallete.button.main});
 
   width: 6px;
   height: 6px;

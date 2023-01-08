@@ -18,7 +18,6 @@ export const HighlightContainer = styled.div`
 export const HighlightThumbContainer = styled.div`
   width: 100%;
   max-height: 500px;
-  border-radius: 50px;
 
   position: relative;
   overflow: hidden;
@@ -38,7 +37,6 @@ export const Gradient = styled.div`
 `
 
 export const HighlightThumb = styled.img`
-  border-radius: 50px;
   width: 100%;
 
   display: flex;

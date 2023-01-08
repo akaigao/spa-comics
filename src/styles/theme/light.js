@@ -18,16 +18,19 @@ const unbounded = Unbounded({
 export default {
   pallete: {
     primary: {
-      main: '#EC1D24',
-      description: '#715C7A'
+      main: '#E61E25',
+      description: '#999999'
     },
     secondary: {
       main: '#fff'
     },
     background: {
-      main: '#1A0024',
-      second: 'linear-gradient(0deg, #1A0024, transparent 50%);',
-      third: 'linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent 50%);'
+      main: '#111111',
+      second: 'linear-gradient(0deg, #111111, transparent 50%);',
+      third: 'linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent 100%);'
+    },
+    button: {
+      main: 'to right, #E61E25, #93291e'
     },
     error: {
       main: red.A400

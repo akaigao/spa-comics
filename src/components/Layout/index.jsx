@@ -1,9 +1,11 @@
 import { Box } from '@mui/material'
 import Head from 'next/head'
-import { Span } from '../../styles/global'
+import Image from 'next/image'
+import logo from '../../assets/logoMarvel.svg'
+import { Span, Title } from '../../styles/global'
 import { Navbar } from '../Navbar'
 import { NavItem, NavList } from '../Navbar/style'
-import { Footer, Header, Main } from './style'
+import { Footer, Header, HeaderBox, Main } from './style'
 
 export function Layout({ children }) {
   return (
@@ -13,8 +15,11 @@ export function Layout({ children }) {
       </Head>
 
       <Header>
-        <h1>Logo</h1>
-        <Navbar />
+        <HeaderBox>
+          <Image priority={true} src={logo} alt="Logo Marvel" />
+          <Title>Comics</Title>
+          <Navbar />
+        </HeaderBox>
       </Header>
 
       <Main>{children}</Main>

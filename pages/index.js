@@ -26,6 +26,7 @@ export const getStaticProps = async () => {
     comicForId = forId.data.data.results
   } catch (error) {
     console.log(error.response.data, 'page index - l28')
+    console.log(error.response.data.code)
 
     if (error.response.data.code === 404) {
       getStaticProps()
