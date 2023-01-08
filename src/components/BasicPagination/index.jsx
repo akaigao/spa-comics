@@ -1,13 +1,6 @@
 import { Pagination } from '@mui/material'
-import { useState } from 'react'
 
-export function BasicPagination() {
-  const [page, setPage] = useState(1)
-
-  const handleChange = (e, value) => {
-    setPage(value)
-  }
-
+export function BasicPagination({ page, count, onChange }) {
   return (
     <Pagination
       sx={{
@@ -29,9 +22,9 @@ export function BasicPagination() {
       color="primary"
       shape="rounded"
       size="small"
-      count={10}
+      count={count}
       page={page}
-      onChange={handleChange}
+      onChange={onChange}
     />
   )
 }
