@@ -35,6 +35,5 @@ export const Listing = styled.div`
 
   @media (max-width: 400px) {
     grid-template-columns: repeat(1, minmax(150px, 1fr));
-    justify-items: center;
   }
 `

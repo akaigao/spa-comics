@@ -28,7 +28,7 @@ export function BasicModal({ open, onClose, comic }) {
   const date = format(new Date(comic[0].dates[0].date), 'yyyy')
 
   return (
-    <Modal open={open} onClose={onClose}>
+    <Modal open={open} onClose={onClose} sx={{ overflow: 'auto' }}>
       <BasicModalContainer>
         <BasicModalThumbContainer>
           <Gradient />

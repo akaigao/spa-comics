@@ -1,18 +1,21 @@
 import styled from 'styled-components'
 
-export const BasicModalContainer = styled.div`
-  margin: 10px 0;
+export const customModalMui = {}
 
-  overflow: auto;
+export const BasicModalContainer = styled.div`
+  margin: 100px 0;
 
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  width: 70%;
-  height: 90%;
+  width: 80%;
   background-color: ${props => props.theme.pallete.background.main};
+
+  :focus-visible {
+    outline: none;
+  }
 `
 
 export const Gradient = styled.div`
@@ -26,7 +29,7 @@ export const Gradient = styled.div`
 
 export const BasicModalThumbContainer = styled.div`
   width: 100%;
-  height: 50%;
+  max-height: 500px;
 
   position: relative;
   overflow: hidden;
@@ -37,6 +40,8 @@ export const BasicModalThumbContainer = styled.div`
 `
 
 export const BasicModalThumb = styled.img`
+  object-fit: cover;
+
   @media (min-width: 1000px) {
     width: 100%;
   }
