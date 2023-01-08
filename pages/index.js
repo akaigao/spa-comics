@@ -18,7 +18,7 @@ export const getStaticProps = async () => {
   let totalHqs = null
 
   try {
-    const all = await api.get(`/comics?format=comic&limit=30&offset=1`)
+    const all = await api.get(`/comics?&limit=30&offset=1`)
     const forId = await api.get(`/comics/${id}`)
 
     totalHqs = all.data.data.total

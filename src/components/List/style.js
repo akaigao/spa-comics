@@ -13,7 +13,6 @@ export const ListContainer = styled.div`
 `
 
 export const Listing = styled.div`
-  /* width: 100%; */
   max-width: 1440px;
 
   display: grid;

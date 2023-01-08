@@ -7,19 +7,11 @@ export function BasicPagination({ page, count, onChange }) {
         '& button': {
           color: '#fff'
         },
-        '& .css-1mb5p0g-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected':
-          {
-            backgroundColor: '#ed213a'
-          },
-        '& .css-1mb5p0g-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected:hover':
-          {
-            backgroundColor: '#93291e'
-          },
         '& div': {
           color: '#fff'
         }
       }}
-      color="primary"
+      color="error"
       shape="rounded"
       size="small"
       count={count}

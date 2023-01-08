@@ -35,9 +35,17 @@ export function List({ comics, total }) {
     let allComics = null
 
     try {
-      const all = await api.get(`/comics?format=comic&limit=30&offset=${value}`)
+      const all = await api.get(`/comics`, {
+        params: {
+          limit: 30,
+          offset: (value - 1) * 30
+        }
+      })
 
       allComics = all.data.data.results
+
+      console.log(allComics, 'list index l42')
+
       setCurrentsComics(allComics)
     } catch (error) {
       console.log(error.response)
