@@ -13,8 +13,8 @@ export default function Home({ allComics, totalHqs, comicForId }) {
 
 export const getStaticProps = async () => {
   let allComics = null
-  let comicForId = null
-  const id = Math.floor(Math.random() * 53820)
+  let comicForId = []
+  const id = Math.floor(Math.random() * 29)
   let totalHqs = null
 
   try {
@@ -23,14 +23,9 @@ export const getStaticProps = async () => {
 
     totalHqs = all.data.data.total
     allComics = all.data.data.results
-    comicForId = forId.data.data.results
+    comicForId.push(all.data.data.results[id])
   } catch (error) {
     console.log(error.response.data, 'page index - l28')
-    console.log(error.response.data.code)
-
-    if (error.response.data.code === 404) {
-      getStaticProps()
-    }
   }
 
   return {
