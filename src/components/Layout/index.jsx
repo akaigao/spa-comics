@@ -4,8 +4,16 @@ import Image from 'next/image'
 import logo from '../../assets/logoMarvel.svg'
 import { Span, Title } from '../../styles/global'
 import { Navbar } from '../Navbar'
-import { NavItem, NavList } from '../Navbar/style'
-import { Footer, Header, HeaderBox, Main } from './style'
+import { NavItem } from '../Navbar/style'
+import {
+  Footer,
+  Header,
+  HeaderBox,
+  HeaderDesktop,
+  HeaderMobile,
+  Main,
+  NavListFooter
+} from './style'
 
 export function Layout({ children }) {
   return (
@@ -15,18 +23,28 @@ export function Layout({ children }) {
       </Head>
 
       <Header>
-        <HeaderBox>
-          <Image priority={true} src={logo} alt="Logo Marvel" />
-          <Title>Comics</Title>
+        <HeaderMobile>
+          <HeaderBox>
+            <Image priority={true} src={logo} alt="Logo Marvel" />
+            <Title>Comics</Title>
+          </HeaderBox>
           <Navbar />
-        </HeaderBox>
+        </HeaderMobile>
+
+        <HeaderDesktop>
+          <HeaderBox>
+            <Image priority={true} src={logo} alt="Logo Marvel" />
+            <Title>Comics</Title>
+            <Navbar />
+          </HeaderBox>
+        </HeaderDesktop>
       </Header>
 
       <Main>{children}</Main>
 
       <Footer>
         <nav>
-          <NavList>
+          <NavListFooter>
             <NavItem>
               <a
                 href="https://www.instagram.com/akaigao/"
@@ -54,8 +72,9 @@ export function Layout({ children }) {
                 LinkedIn
               </a>
             </NavItem>
-          </NavList>
+          </NavListFooter>
         </nav>
+
         <Box>
           <Span>&copy;{new Date().getFullYear()} akaigão</Span>
         </Box>
