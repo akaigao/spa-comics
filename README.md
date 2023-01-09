@@ -4,7 +4,7 @@ Criar uma interface SPA que mostre uma tela de lista de quadrinhos.
 
 <div align='center'>
 
-![](https://imgur.com/RjrzGh8.gif)
+![](https://imgur.com/HiVGUB5.png)
 
 </div>
 
