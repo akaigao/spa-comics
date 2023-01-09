@@ -60,11 +60,19 @@ Ou no caso de obter uma cópia localmente, siga esses passos de exemplo.
 
 </div>
 
+### Modal
+
+<div align="center">
+
+![](https://imgur.com/crdnbxw.png)
+
+</div>
+
 ### Responsividade
 
 <div align='center'>
 
-![](https://imgur.com/zeCpO0Q.gif)
+![](https://imgur.com/h1sv9WM.png)
 
 </div>
 
