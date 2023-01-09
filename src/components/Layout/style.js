@@ -6,9 +6,9 @@ export const HeaderDesktop = styled.div`
 
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
-  @media (max-width: 430px) {
+  @media (max-width: 440px) {
     display: none;
   }
 `
@@ -17,7 +17,7 @@ export const HeaderMobile = styled.div`
   width: 100%;
   display: none;
 
-  @media (max-width: 430px) {
+  @media (max-width: 440px) {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,7 +39,7 @@ export const Header = styled.header`
   align-items: center;
   justify-content: center;
 
-  @media (max-width: 430px) {
+  @media (max-width: 440px) {
     height: 130px;
   }
 `
@@ -54,7 +54,7 @@ export const HeaderBox = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  @media (max-width: 430px) {
+  @media (max-width: 440px) {
     width: auto;
     flex-direction: column;
     padding: 0;
@@ -85,7 +85,7 @@ export const Footer = styled.footer`
   align-items: center;
   justify-content: space-between;
 
-  @media (max-width: 430px) {
+  @media (max-width: 440px) {
     flex-direction: column;
     height: auto;
   }
