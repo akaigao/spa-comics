@@ -54,8 +54,6 @@ Ou no caso de obter uma cópia localmente, siga esses passos de exemplo.
 
 # Uso
 
-### Validações e obrigatoriedade
-
 <div align="center">
 
 ![](https://imgur.com/i7otGbH.gif)
@@ -66,7 +64,7 @@ Ou no caso de obter uma cópia localmente, siga esses passos de exemplo.
 
 <div align='center'>
 
-![](https://imgur.com/QP5CutJ.gif)
+![](https://imgur.com/zeCpO0Q.gif)
 
 </div>
 
