@@ -4,7 +4,7 @@ Criar uma interface SPA que mostre uma tela de lista de quadrinhos.
 
 <div align='center'>
 
-![](https://imgur.com/CD5JEBT.gif)
+![](https://imgur.com/RjrzGh8.gif)
 
 </div>
 
@@ -66,7 +66,7 @@ Ou no caso de obter uma cópia localmente, siga esses passos de exemplo.
 
 <div align='center'>
 
-![](https://imgur.com/yfA8RRK.gif)
+![](https://imgur.com/QP5CutJ.gif)
 
 </div>
 
