@@ -21,11 +21,19 @@ import {
 export function BasicModal({ open, onClose, comic }) {
   if (!comic) return
 
+  let newDate = comic[0].dates[0].date
+
   const pathThumb = comic[0].thumbnail.path + '.' + comic[0].thumbnail.extension
   const description = !comic[0].description
     ? 'No description for this comic :('
     : comic[0].description.split('<br>')[0]
-  const date = format(new Date(comic[0].dates[0].date), 'yyyy')
+
+  if (comic[0].dates[0].date[0] === '-') {
+    const slice = comic[0].dates[0].date.slice(1)
+    newDate = slice
+  }
+
+  const date = format(new Date(newDate), 'yyyy')
 
   return (
     <Modal open={open} onClose={onClose} sx={{ overflow: 'auto' }}>

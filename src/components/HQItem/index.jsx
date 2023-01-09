@@ -9,8 +9,15 @@ import {
 } from './style'
 
 export function HQItem({ onClick, idComic, thumb, title, date, formatData }) {
+  let newDate = date
   const pathThumb = thumb.path + '.' + thumb.extension
-  const formattedDate = format(new Date(date), 'MMMM dd, yyyy')
+
+  if (date[0] === '-') {
+    const slice = date.slice(1)
+    newDate = slice
+  }
+
+  const formattedDate = format(new Date(newDate), 'MMMM dd, yyyy')
 
   return (
     <HQItemContainer>

@@ -43,9 +43,6 @@ export function List({ comics, total }) {
       })
 
       allComics = all.data.data.results
-
-      console.log(allComics, 'list index l42')
-
       setCurrentsComics(allComics)
     } catch (error) {
       console.log(error.response)
